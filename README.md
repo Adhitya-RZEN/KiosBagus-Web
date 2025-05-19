@@ -1,7 +1,9 @@
 KiosBagus
+
 Web ini dirancang sebagai solusi website untuk membantu kios tradisional seperti Kios Bagus dalam mengelola operasional secara digital, mulai dari pencatatan stok hingga layanan pelanggan. Aplikasi ini bertujuan meningkatkan efisiensi, mengurangi kesalahan pencatatan manual, serta memperluas jangkauan pasar di era digital.
 
 SiteMap 
+
 - Pembeli
   - Account
 	  Register/login
@@ -16,7 +18,7 @@ SiteMap
 	  Recommned
 	  Product Detail
 
--Penjual
+- Penjual
   - Manage Product
 	  Harga
 	  Promo
@@ -30,7 +32,7 @@ SiteMap
   - Pesanan
 	  Detail pesanan
 
--Kurir
+- Kurir
   - Account
 	  Register/login
 	  Manage profile
@@ -40,6 +42,7 @@ SiteMap
 	  Status pengiriman
 
 Teknologi
+
   - HTML
   - JavaScript
   - PHP 
