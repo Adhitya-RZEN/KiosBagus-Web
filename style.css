@@ -339,11 +339,6 @@ a{
   font-size: 14px;
 }
 
-.signup-box a {
-  color: #007bff;
-  text-decoration: none;
-}
-
 .signup-box label {
   display: flex;
 
