@@ -82,4 +82,35 @@ categories.addEventListener('mousemove', (e) => {
   }
 });
 
+//signin dan signup
+  // Fungsi untuk pindah dari page1 ke page2
+  function goToPage2(event) {
+    event.preventDefault(); // Mencegah form reload halaman
 
+    const nomorInput = document.getElementById("nomor");
+    const nomorValue = nomorInput.value.trim();
+
+    if (nomorValue === "") {
+      alert("Mohon isi nomor handphone terlebih dahulu.");
+      nomorInput.focus();
+      return;
+    }
+
+    // Menyembunyikan page1 dan menampilkan page2
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "flex";
+  }
+
+  // Fungsi opsional jika ingin kembali ke page1
+
+  function goToPage1(event) {
+    event.preventDefault();
+    document.getElementById("page1").style.display = "flex";
+    document.getElementById("page2").style.display = "none";
+  }
+
+  // Saat halaman pertama kali dimuat, pastikan hanya page1 yang terlihat
+  window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("page1").style.display = "flex";
+    document.getElementById("page2").style.display = "none";
+  });
