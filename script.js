@@ -8,8 +8,7 @@ const itemWidth = document.querySelector('.carousel-item').offsetWidth + 20; // 
 const totalItems = document.querySelectorAll('.carousel-item').length;
 const maxSlide = Math.floor(totalItems / 2); // karena 2 item tampil sekaligus
 
-carousel.style.transform = `translateX(-${currentSlide * itemWidth * 2}px)`;
-
+// Set initial position of the carousel dot
 function updateCarousel() {
   carousel.style.transform = `translateX(-${currentSlide * itemWidth * 2}px)`;
   dots.forEach((dot, index) => {
@@ -41,3 +40,46 @@ dots.forEach((dot, index) => {
   });
 });
 updateCarousel();
+
+const categories = document.querySelector('.categories');
+
+// Duplicate category items to create circular effect
+categories.innerHTML += categories.innerHTML; // gandakan isi kategori
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+categories.addEventListener('mousedown', (e) => {
+  isDown = true;
+  categories.classList.add('active');
+  startX = e.pageX - categories.offsetLeft;
+  scrollLeft = categories.scrollLeft;
+});
+
+categories.addEventListener('mouseleave', () => {
+  isDown = false;
+  categories.classList.remove('active');
+});
+
+categories.addEventListener('mouseup', () => {
+  isDown = false;
+  categories.classList.remove('active');
+});
+
+categories.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - categories.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  categories.scrollLeft = scrollLeft - walk;
+
+  const halfScroll = categories.scrollWidth / 2;
+  if (categories.scrollLeft >= halfScroll) {
+    categories.scrollLeft = 0;
+  } else if (categories.scrollLeft <= 0) {
+    categories.scrollLeft = halfScroll;
+  }
+});
+
+
