@@ -6,28 +6,16 @@ body {
 
 .header {
   display: flex;
+background: #555;
+  margin: 0 75px;
   align-items: center;
-  padding: 20px 75px;
+  padding: 12px 50x;
   border-bottom: 1px solid #ddd;
 }
 
 .logo {
   flex: 0 0 50px;
   cursor: pointer;
-}
-
-.menu {
-  margin: 0 50px;
-  /* background-color: #555; */
-  display: flex;  
-  cursor: pointer;
-  gap: 5px;         /* Aktifkan layout horizontal */
-}
-.menu p{
-  color: #ffc107;
-  padding: 10px;
-  margin: 0;
-  font-weight: bold;
 }
 
 .search {
@@ -51,9 +39,74 @@ body {
   margin-right: 50px;
   cursor: pointer;
 }
+.acc-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.auth {
-  margin-left: auto;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  display: flex;
+  gap: 12px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  background-color: white;
+  min-width: 1040px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: none;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+.submenu-container {
+  position: relative;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 1040px;
+  padding: 0 75px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.submenu-container:hover .submenu {
+  display: block;
 }
 a{
   text-decoration: none;
@@ -62,7 +115,7 @@ a{
 }
 .carousel {
   display: flex;
-  margin: 0 75px 0 75px;
+  margin: 0 75px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -113,7 +166,10 @@ a{
 }
 
 .carousel-btn {
-  background: none;
+  position: absolute;
+  background: white;
+  width: 28px;
+  height: 40px;
   border-radius: 50%;
   height: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -124,7 +180,15 @@ a{
   background: #ffffff;
   color: #ffc107;
 }
+.carousel-btn.prev {
+  left: 0;
+  z-index: 1;
+}
 
+/* Posisi tombol next di kanan */
+.carousel-btn.next {
+  right: 0;
+}
 .carousel-dots {
   position: absolute;
   bottom: -20px;

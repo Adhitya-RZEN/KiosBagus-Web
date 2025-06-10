@@ -6,14 +6,27 @@
   <title>Beranda</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="index.html" />
-    <link rel="stylesheet" href="masuk.html" />
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="logo"><a href="index.html">Logo</a></div>
-    <nav class="menu"><img src="Assets/Grid.svg"/><p>Menu</p></nav>
+    <div class="dropdown">
+      <button class="dropdown-toggle"><img src="Assets/Grid.svg"/><p>Menu</p></button>
+      <div class="dropdown-menu">
+        <a href="beranda.html">Promo</a>
+        <a href="produk.html">Brand</a>
+        <div class="submenu-container">
+          <a href="#">Produk</a>
+          <div class="submenu">
+            <a href="produk.html">Produk 1</a>
+            <a href="produk.html">Produk 2</a>
+            <a href="produk.html">Produk 3</a>
+            <a href="produk.html">Produk 4</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <input type="text" placeholder="Search" class="search" />
     <button class="search-btn"><img src="Assets/search.png"/></button>
     <div class="cart"><img src="Assets/Shopping cart.png"/></div>
