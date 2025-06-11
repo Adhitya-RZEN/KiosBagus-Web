@@ -31,7 +31,7 @@
     <button class="search-btn"><img src="Assets/search.png"/></button>
     <div class="cart"><img src="Assets/Shopping cart.png"/></div>
     <div class="auth" id="loginFalse">
-      <a href="daftar.html">Daftar</a> <a href="masuk.html">Masuk</a>
+      <a href="daftar.php">Daftar</a> <a href="masuk.php">Masuk</a>
     </div>
   </header>
 
@@ -39,14 +39,14 @@
   <main class="login-container">
     <div class="login-box">
       <h3>Masuk</h3>
-      <p>Belum punya akun?<a href="daftar.html">Daftar</a></p>
+      <p>Belum punya akun?<a href="daftar.php">Daftar</a></p>
       <form id="loginCheck">
         <input type="text" placeholder="Email/No. Handphone" />
         <input type="password" placeholder="Password" />
         <label>
           <input type="checkbox" /> Ingat saya
         </label>
-        <button type="submit" id="signInButton">Masuk</button>
+        <button type="submit" id="signInButton" a href="index.php">Masuk</button>
       </form>
     </div>
   </main>

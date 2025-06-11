@@ -31,27 +31,15 @@
     <button class="search-btn"><img src="Assets/search.png"/></button>
     <div class="cart"><img src="Assets/Shopping cart.png"/></div>
     <div class="auth">
-      <a href="daftar.html">Daftar</a> <a href="masuk.html">Masuk</a>
+      <a href="daftar.php">Daftar</a> <a href="masuk.php">Masuk</a>
     </div>
   </header>
 
-<!-- Form SignUp -->
-<!-- <main class="signup-container" id="page1">
-  <form class="signup-box">
-    <h3>Daftar</h3>
-    <p>Sudah punya akun?<a href="masuk.html">Masuk</a></p>
-    
-    <label for="nomor">No. Handphone</label>
-    <input type="text" id="nomor" name="no.hp" placeholder="No. Handphone" />
-
-    <button type="submit" onclick="goToPage2(event)">Lanjut</button>
-  </form>
-</main> -->
 
 <main class="signup-container" >
   <form class="signup-box">
     <h3>Daftar</h3>
-    <p>Sudah punya akun?<a href="masuk.html">Masuk</a></p>
+    <p>Sudah punya akun?<a href="masuk.php">Masuk</a></p>
     
     <label for="nomor">No. Handphone</label>
     <input type="text" id="nomor" name="no.hp" placeholder="No. Handphone" />
@@ -68,7 +56,7 @@
     <label for="confirmPassword">Konfirmasi Password</label>
     <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password" required />
 
-    <button type="submit">Lanjut</button>
+    <button type="submit" a href="masuk.php">Lanjut</button>
   </form>
 </main>
   <!-- Footer -->
