@@ -37,27 +37,27 @@
 
 
 <main class="signup-container" >
-  <form class="signup-box">
-    <h3>Daftar</h3>
-    <p>Sudah punya akun?<a href="masuk.php">Masuk</a></p>
-    
-    <label for="nomor">No. Handphone</label>
-    <input type="text" id="nomor" name="no.hp" placeholder="No. Handphone" />
+<form class="signup-box" action="sign-in.php" method="POST">
+  <h3>Daftar</h3>
+  <p>Sudah punya akun? <a href="masuk.php">Masuk</a></p>
 
-    <label for="username">Username</label>
-    <input type="username" id="username" name="username" placeholder="Masukan Username" required />
+  <label for="nomor">No. Handphone</label>
+  <input type="text" id="nomor" name="no_hp" placeholder="No. Handphone" />
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" placeholder="Masukkan Username" required />
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Masukkan password" required />
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="example@mail.com" required />
 
-    <label for="confirmPassword">Konfirmasi Password</label>
-    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password" required />
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" placeholder="Masukkan password" required />
 
-    <button type="submit" a href="masuk.php">Lanjut</button>
-  </form>
+  <label for="confirmPassword">Konfirmasi Password</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password" required />
+
+  <button type="submit">Lanjut</button>
+</form>
 </main>
   <!-- Footer -->
   <footer class="footer">

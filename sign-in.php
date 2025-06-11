@@ -15,15 +15,15 @@ if ($password !== $confirmPassword) {
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO users (no_hp, username, email, password) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO users (username, email, no_hp, password) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssss", $nomor, $username, $email, $hashedPassword);
+$stmt->bind_param("ssss", $username, $email, $nomor, $hashedPassword);
 $stmt->execute();
 
 if ($stmt->affected_rows > 0) {
     echo "Registrasi berhasil. <a href='masuk.php'>Login di sini</a>";
 } else {
-    echo "Registrasi gagal. <a href='daftar.php'>Coba lagi</a>";
+    echo "Registrasi gagal: " . $stmt->error . " <a href='daftar.php'>Coba lagi</a>";
 }
 
 $stmt->close();
