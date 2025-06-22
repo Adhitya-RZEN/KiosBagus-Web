@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "Saufan";
+$pass = "";
 $db = "db_kios";
 
 $conn = new mysqli($host, $user, $pass, $db);
