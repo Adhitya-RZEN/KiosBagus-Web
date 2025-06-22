@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Pendapatan Harian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f4f5f7;
+      --card-bg-color: #ffffff;
+      --text-color: #333333;
+      --secondary-text-color: #777;
+      --accent-color: #efb1b1;
+      --accent-color-dark: #e89a9a;
+      --border-color: #e0e0e0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      margin: 0;
+    }
+    .admin-header {
+      background-color: var(--card-bg-color);
+      padding: 0 30px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 65px;
+    }
+    .admin-header .logo { font-size: 20px; font-weight: 700; }
+    .admin-header nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      padding: 22px 15px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+    .admin-header nav a:hover { color: var(--accent-color-dark); }
+    .admin-header nav a.active {
+      color: var(--accent-color-dark);
+      border-bottom: 3px solid var(--accent-color-dark);
+    }
+    .main-container {
+      padding: 30px;
+    }
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .content-header h1 { margin: 0; }
+    .date-selector {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+    .card {
+      background-color: var(--card-bg-color);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 25px;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--secondary-text-color);
+    }
+    .card .value {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--text-color);
+    }
+    .summary-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+    .graph-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      border: 1px dashed var(--border-color);
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border-color); }
+  </style>
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="logo">Admin Panel</div>
+    <nav>
+        <a href="admin_login.html">Dashboard</a>
+        <a href="admin_barang.html">Manajemen Produk</a>
+        <a href="admin_ulasan.html">Ulasan</a>
+        <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <div class="content-header">
+      <h1>Laporan Pendapatan Harian</h1>
+      <input type="date" id="reportDate" class="date-selector" value="2025-06-21">
+    </div>
+
+    <section class="summary-cards">
+        <div class="card">
+            <h2>Total Pendapatan</h2>
+            <p class="value">Rp 2.580.000</p>
+        </div>
+        <div class="card">
+            <h2>Jumlah Pesanan</h2>
+            <p class="value">25</p>
+        </div>
+        <div class="card">
+            <h2>Produk Terjual</h2>
+            <p class="value">62 item</p>
+        </div>
+    </section>
+
+    <section class="card">
+      <h2>Rincian Transaksi - 21 Juni 2025</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Pesanan</th>
+            <th>Waktu</th>
+            <th>Pelanggan</th>
+            <th>Metode Pembayaran</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>WEKS-aADT73878</td>
+            <td>08:15</td>
+            <td>Adhitya Nugraha</td>
+            <td>E-Wallet</td>
+            <td>Rp 7.000</td>
+          </tr>
+          <tr>
+            <td>FREK-bSDF98213</td>
+            <td>08:05</td>
+            <td>Budi Santoso</td>
+            <td>COD</td>
+            <td>Rp 150.000</td>
+          </tr>
+          <tr>
+            <td>XYZK-dKLM45896</td>
+            <td>07:55</td>
+            <td>Siti Aminah</td>
+            <td>Transfer Bank</td>
+            <td>Rp 88.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</body>
+</html>

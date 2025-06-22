@@ -1,0 +1,67 @@
+    .auth {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none; /* Tersembunyi di awal */
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      width: 220px;
+      padding: 12px;
+      z-index: 1000;
+      font-family: sans-serif;
+    }
+
+    .dropdown.show {
+      display: block; /* Muncul saat diklik */
+    }
+
+    .dropdown .header {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .dropdown hr {
+      margin: 8px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .dropdown .content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .dropdown .left,
+    .dropdown .right {
+      font-size: 14px;
+    }
+
+    .dropdown .right div {
+      margin-bottom: 4px;
+    }
+
+    .logout-btn {
+      display: block;
+      margin: 0 auto;
+      padding: 6px 14px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
